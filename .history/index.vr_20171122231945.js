@@ -1,0 +1,25 @@
+import React from 'react';
+import {
+  AppRegistry,
+  asset,
+  Pano,
+  Text,
+  View,
+} from 'react-vr';
+
+export default class VRtest extends React.Component {
+  render() {
+    return (
+      <View>
+        <Pano source={asset('pano.jpg')}/>
+        <Sphere
+        radius={0.5}
+        widthSegments={20}
+        heightSegments={12}
+      />
+      </View>
+    );
+  }
+};
+
+AppRegistry.registerComponent('VRtest', () => VRtest);
