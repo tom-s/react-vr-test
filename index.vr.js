@@ -3,6 +3,7 @@ import {
   AppRegistry,
   asset,
   Pano,
+  VideoPano,
   Text,
   View,
   VrButton
@@ -16,7 +17,8 @@ export default class VRtest extends React.Component {
     const { textColor } = this.state
     return (
       <View>
-        <Pano source={asset('pano.jpg')} />
+        {/* <Pano source={asset('pano.jpg')} /> */}
+        <VideoPano source={asset('video.mp4')} />
         <VrButton
           onEnter={() => this.setState({textColor: 'red'})}
           onExit={() => this.setState({textColor: 'white'})}
