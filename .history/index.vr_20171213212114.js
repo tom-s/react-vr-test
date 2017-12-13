@@ -17,23 +17,15 @@ export default class VRtest extends React.Component {
     const { textColor } = this.state
     return (
       <View>
-        <Pano width={'50%'} height={'50%'} source={asset('pano.jpg')} />
-        {/*<Pano source={[
-          /*
+        {/* <Pano source={asset('pano.jpg')} /> */}
+        <Pano source={[
           asset('cubemap/9600.png'),
           asset('cubemap/9601.png'),
           asset('cubemap/9602.png'),
           asset('cubemap/9603.png'),
           asset('cubemap/9604.png'),
           asset('cubemap/9605.png')
-          *//*
-          asset('cubemap/15360.png'),
-          asset('cubemap/15361.png'),
-          asset('cubemap/15362.png'),
-          asset('cubemap/15363.png'),
-          asset('cubemap/15364.png'),
-          asset('cubemap/15365.png')
-        ]} />*/}
+        ]} />
         <VrButton
           onEnter={() => this.setState({textColor: 'red'})}
           onExit={() => this.setState({textColor: 'white'})}
